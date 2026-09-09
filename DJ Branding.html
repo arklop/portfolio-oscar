@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ Branding</title>
+
+    <!-- Google Fonts: Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Space Grotesk"', 'sans-serif'],
+                    },
+                    colors: {
+                        'neo-bg': '#fdf5e6',
+                        'neo-black': '#000000',
+                    },
+                    boxShadow: {
+                        'neo': '6px 6px 0px 0px rgba(0,0,0,1)',
+                        'neo-hover': '2px 2px 0px 0px rgba(0,0,0,1)',
+                        'neo-xl': '12px 12px 0px 0px rgba(0,0,0,1)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --accent-color: #39ff14;
+            /* Default fallback */
+        }
+
+        body {
+            background-color: theme('colors.neo-bg');
+            overflow-x: hidden;
+        }
+
+        .bg-accent {
+            background-color: var(--accent-color) !important;
+        }
+
+        .hover\:bg-accent:hover {
+            background-color: var(--accent-color) !important;
+        }
+
+        .text-accent {
+            color: var(--accent-color) !important;
+        }
+
+        .border-accent {
+            border-color: var(--accent-color) !important;
+        }
+
+        .shadow-accent {
+            box-shadow: 6px 6px 0px 0px var(--accent-color);
+        }
+
+        .elastic-hover {
+            transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55), box-shadow 0.2s ease;
+        }
+
+        .elastic-hover:hover {
+            transform: translate(-4px, -4px) !important;
+            box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 1);
+        }
+
+        ::-webkit-scrollbar {
+            width: 16px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: theme('colors.neo-bg');
+            border-left: 4px solid black;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--accent-color);
+            border: 4px solid black;
+        }
+        /* H1 hero: thin stroke on mobile, full on desktop */
+        header h1 {
+            -webkit-text-stroke: 1px black;
+        }
+        @media (min-width: 768px) {
+            header h1 {
+                -webkit-text-stroke: 3px black;
+            }
+        }
+    </style>
+</head>
+
+<body class="text-neo-black antialiased relative selection:bg-black selection:text-white">
+
+    <!-- NAVBAR NAV (Mismo estilo, vuelve a inicio) -->
+    <nav class="fixed top-0 w-full p-4 md:p-6 z-40 flex justify-between items-center pointer-events-none">
+        <a href="index.html"
+            class="bg-white border-4 border-black px-4 py-2 font-black text-xl shadow-neo transform -rotate-2 pointer-events-auto hover:bg-accent transition-colors elastic-hover">
+            ← VOLVER
+        </a>
+        <div class="hidden md:flex gap-4">
+            <a href="mailto:hola@ejemplo.com"
+                class="bg-white border-4 border-black px-6 py-2 font-bold shadow-neo elastic-hover pointer-events-auto hover:bg-accent transition-colors">CONTACTO</a>
+        </div>
+    </nav>
+
+    <!-- HERO DEL PROYECTO -->
+    <header class="pt-40 pb-20 px-4 md:px-12 max-w-6xl mx-auto border-b-4 border-black mb-20">
+
+        <h1 class="text-[10vw] md:text-7xl font-black uppercase leading-snug md:leading-[0.9] tracking-normal md:tracking-tighter drop-shadow-[2px_2px_0_rgba(0,0,0,1)] md:drop-shadow-[4px_4px_0_rgba(0,0,0,1)] text-white mb-8">
+            DJ Branding &amp; Social Media
+        </h1>
+
+        <p class="text-2xl font-bold max-w-3xl leading-relaxed border-l-8 border-accent pl-6 py-2">
+            Dirección de arte y diseño publicitario para el ecosistema del clubbing. Creación de una identidad visual
+            sólida y magnética para elevar el caché del artista en redes sociales.
+        </p>
+    </header>
+
+    <!-- CONTENIDO TIPO ARTÍCULO -->
+    <article class="px-4 md:px-12 max-w-4xl mx-auto pb-32 flex flex-col gap-12 text-xl leading-relaxed">
+
+        <h2 class="text-5xl font-black uppercase mb-4 mt-8">El Reto: Huir del Flyer Genérico</h2>
+
+        <p>
+            En la industria del ocio nocturno, la imagen que proyecta un artista en sus redes sociales es tan importante
+            como su selección musical. El objetivo de este proyecto fue diseñar un universo visual propio para un DJ en
+            pleno crecimiento, alejándonos de las plantillas de club nocturno genéricas para construir una marca
+            personal con autoridad, ritmo y una estética visual muy cuidada.
+        </p>
+
+        <img src="img/story-semanal-2-iker-gonzalez-junio.png" alt="Diseño de feed para DJ"
+            class="w-full border-4 border-black shadow-neo-xl transform -rotate-1 my-8">
+
+        <h2 class="text-5xl font-black uppercase mb-4 mt-8">Cartelería Digital: Tour Dates y Lanzamientos</h2>
+        <p class="text-xl leading-relaxed mb-6">
+            La estrategia gráfica se centró en unificar la comunicación del artista. Diseñé una línea visual de alto
+            impacto para anunciar sus <em>Tour Dates</em> (fechas de gira) y actuaciones destacadas. Se priorizó una
+            composición tipográfica agresiva, un tratamiento de color inmersivo y el uso de texturas que transmiten la
+            energía de la música en directo. Cada post fue conceptualizado para detener el <em>scroll</em> y generar una
+            percepción de evento exclusivo.
+        </p>
+
+        <h2 class="text-5xl font-black uppercase mb-4 mt-8">El Formato Rey: Diseño Vertical para Stories</h2>
+        <p class="text-xl leading-relaxed mb-6">
+            Sabiendo que el 80% de la interacción de los fans ocurre en Instagram Stories, el sistema visual se adaptó
+            meticulosamente al formato vertical (9:16). Se crearon animaciones ligeras y cartelería dinámica para
+            <em>line-ups</em>, <em>set times</em> y recordatorios de venta de entradas, manteniendo siempre el ADN
+            visual del artista intacto.
+        </p>
+
+        <!-- CARRUSEL DE STORIES (JS INTERACTIVO) -->
+        <div class="my-12 relative w-full" id="stories-carousel">
+            <!-- Encabezado y botones -->
+            <div class="flex items-center justify-between mb-4">
+                <p class="font-bold text-lg md:text-xl uppercase tracking-tight">Stories Destacadas</p>
+                <div class="flex gap-4">
+                    <button id="carousel-prev"
+                        class="w-12 h-12 md:w-14 md:h-14 bg-white border-4 border-black shadow-neo flex items-center justify-center font-black text-2xl elastic-hover hover:bg-accent transition-colors focus:outline-none"
+                        aria-label="Anterior">
+                        &larr;
+                    </button>
+                    <button id="carousel-next"
+                        class="w-12 h-12 md:w-14 md:h-14 bg-white border-4 border-black shadow-neo flex items-center justify-center font-black text-2xl elastic-hover hover:bg-accent transition-colors focus:outline-none"
+                        aria-label="Siguiente">
+                        &rarr;
+                    </button>
+                </div>
+            </div>
+
+            <!-- Contenedor Oculto para overflow -->
+            <div class="overflow-hidden w-full relative pb-8">
+                <!-- Track del carrusel -->
+                <div id="carousel-track" class="flex gap-6 transition-transform duration-500 ease-in-out">
+
+                    <!-- Story 1 -->
+                    <div class="shrink-0 w-[75vw] md:w-[350px] aspect-[9/16]">
+                        <img src="img/Story-MENSUAL-Iker-Gonzalez-Mayo-ACTUALIZADO.png" alt="Diseño Story 1"
+                            class="w-full h-full object-cover border-4 border-black shadow-neo-xl">
+                    </div>
+
+                    <!-- Story 2 -->
+                    <div class="shrink-0 w-[75vw] md:w-[350px] aspect-[9/16]">
+                        <img src="img/Story-Semanal-1-Iker-Gonzalez-Mayo-ACTUALIZADO.png" alt="Diseño Story 2"
+                            class="w-full h-full object-cover border-4 border-black shadow-neo-xl">
+                    </div>
+
+                    <!-- Story 3 -->
+                    <div class="shrink-0 w-[75vw] md:w-[350px] aspect-[9/16]">
+                        <img src="img/Story-Semanal-2-Iker-Gonzalez-Mayo-ACTUALIZADO.png" alt="Diseño Story 3"
+                            class="w-full h-full object-cover border-4 border-black shadow-neo-xl">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- FIN CARRUSEL -->
+
+        <h2 class="text-5xl font-black uppercase mb-4 mt-8">El Resultado</h2>
+        <p class="text-xl leading-relaxed mb-6">
+            Este enfoque integral demostró cómo un diseño cohesivo y bien ejecutado puede transformar la percepción de
+            un artista. Al estandarizar la calidad de su contenido promocional, se logró proyectar una imagen mucho más
+            profesional ante promotores, salas y público, convirtiendo cada anuncio en una pieza de diseño atractiva por
+            sí misma.
+        </p>
+
+        <img src="img/STORY-ULTIMAS-FECHAS-VERANO-IKER.png" alt="Cartel de fechas del DJ"
+            class="w-full border-4 border-black shadow-neo-xl transform rotate-1 my-8">
+
+    </article>
+
+    <!-- FOOTER MENOR -->
+    <footer class="bg-white border-t-8 border-black py-12 px-4 text-center flex flex-col items-center">
+        <h2 class="text-4xl font-black uppercase mb-8">¿Siguiente Proyecto?</h2>
+        <a href="index.html#proyectos"
+            class="inline-block bg-accent border-4 border-black px-8 py-4 text-2xl font-black uppercase shadow-neo elastic-hover">
+            Volver al Archivo
+        </a>
+    </footer>
+
+    <!-- SCRIPT PARA RECUPERAR COLOR Y CARRUSEL -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Recuperar color de localStorage (como en el index)
+            const savedData = localStorage.getItem('themeData');
+            if (savedData) {
+                try {
+                    const parsed = JSON.parse(savedData);
+                    document.documentElement.style.setProperty('--accent-color', parsed.color);
+                } catch (e) { }
+            }
+
+            // --- Lógica del Carrusel Interactivo ---
+            const track = document.getElementById('carousel-track');
+            const prevBtn = document.getElementById('carousel-prev');
+            const nextBtn = document.getElementById('carousel-next');
+            const carousel = document.getElementById('stories-carousel');
+
+            if (track && prevBtn && nextBtn && carousel) {
+                const slides = Array.from(track.children);
+                let currentIndex = 0;
+                let slideWidth = slides[0].getBoundingClientRect().width;
+                // Obtenemos el gap real computado o usamos el valor por defecto (gap-6 en Tailwind = 24px)
+                const computedGap = window.getComputedStyle(track).gap;
+                let gap = computedGap !== 'normal' ? parseFloat(computedGap) : 24;
+                let autoplayInterval;
+
+                const updateDimensions = () => {
+                    slideWidth = slides[0].getBoundingClientRect().width;
+                    const newGap = window.getComputedStyle(track).gap;
+                    gap = newGap !== 'normal' ? parseFloat(newGap) : 24;
+                    goToSlide(currentIndex, false);
+                };
+
+                window.addEventListener('resize', updateDimensions);
+
+                const goToSlide = (index, animate = true) => {
+                    if (index < 0) {
+                        index = slides.length - 1; // Loop hacia el final
+                    } else if (index >= slides.length) {
+                        index = 0; // Loop hacia el inicio
+                    }
+
+                    track.style.transition = animate ? 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)' : 'none';
+                    const moveAmount = (slideWidth + gap) * index;
+                    track.style.transform = `translateX(-${moveAmount}px)`;
+                    currentIndex = index;
+                };
+
+                const nextSlide = () => goToSlide(currentIndex + 1);
+                const prevSlide = () => goToSlide(currentIndex - 1);
+
+                nextBtn.addEventListener('click', () => {
+                    nextSlide();
+                    resetAutoplay();
+                });
+
+                prevBtn.addEventListener('click', () => {
+                    prevSlide();
+                    resetAutoplay();
+                });
+
+                const startAutoplay = () => {
+                    if (!autoplayInterval) {
+                        autoplayInterval = setInterval(nextSlide, 3000);
+                    }
+                };
+
+                const stopAutoplay = () => {
+                    if (autoplayInterval) {
+                        clearInterval(autoplayInterval);
+                        autoplayInterval = null;
+                    }
+                };
+
+                const resetAutoplay = () => {
+                    stopAutoplay();
+                    startAutoplay();
+                };
+
+                startAutoplay();
+
+                carousel.addEventListener('mouseenter', stopAutoplay);
+                carousel.addEventListener('mouseleave', startAutoplay);
+                carousel.addEventListener('touchstart', stopAutoplay, { passive: true });
+                carousel.addEventListener('touchend', startAutoplay, { passive: true });
+            }
+        });
+    </script>
+</body>
+
+</html>

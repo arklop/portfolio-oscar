@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caso de Estudio | Nombre del Proyecto</title>
+
+    <!-- Google Fonts: Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Space Grotesk"', 'sans-serif'],
+                    },
+                    colors: {
+                        'neo-bg': '#fdf5e6',
+                        'neo-black': '#000000',
+                    },
+                    boxShadow: {
+                        'neo': '6px 6px 0px 0px rgba(0,0,0,1)',
+                        'neo-hover': '2px 2px 0px 0px rgba(0,0,0,1)',
+                        'neo-xl': '12px 12px 0px 0px rgba(0,0,0,1)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --accent-color: #39ff14; /* Default fallback */
+        }
+        
+        body {
+            background-color: theme('colors.neo-bg');
+            overflow-x: hidden;
+        }
+
+        .bg-accent { background-color: var(--accent-color) !important; }
+        .hover\:bg-accent:hover { background-color: var(--accent-color) !important; }
+        .text-accent { color: var(--accent-color) !important; }
+        .border-accent { border-color: var(--accent-color) !important; }
+        .shadow-accent { box-shadow: 6px 6px 0px 0px var(--accent-color); }
+
+        .elastic-hover {
+            transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55), box-shadow 0.2s ease;
+        }
+        .elastic-hover:hover {
+            transform: translate(-4px, -4px) !important;
+            box-shadow: 10px 10px 0px 0px rgba(0,0,0,1);
+        }
+
+        ::-webkit-scrollbar { width: 16px; }
+        ::-webkit-scrollbar-track { background: theme('colors.neo-bg'); border-left: 4px solid black; }
+        ::-webkit-scrollbar-thumb { background-color: var(--accent-color); border: 4px solid black; }
+    </style>
+</head>
+<body class="text-neo-black antialiased relative selection:bg-black selection:text-white">
+
+    <!-- NAVBAR NAV (Mismo estilo, vuelve a inicio) -->
+    <nav class="fixed top-0 w-full p-4 md:p-6 z-40 flex justify-between items-center pointer-events-none">
+        <a href="index.html" class="bg-white border-4 border-black px-4 py-2 font-black text-xl shadow-neo transform -rotate-2 pointer-events-auto hover:bg-accent transition-colors elastic-hover">
+            ← VOLVER
+        </a>
+        <div class="hidden md:flex gap-4">
+            <a href="mailto:hola@ejemplo.com" class="bg-white border-4 border-black px-6 py-2 font-bold shadow-neo elastic-hover pointer-events-auto hover:bg-accent transition-colors">CONTACTO</a>
+        </div>
+    </nav>
+
+    <!-- HERO DEL PROYECTO -->
+    <header class="pt-40 pb-20 px-4 md:px-12 max-w-6xl mx-auto border-b-4 border-black mb-20">
+        
+        <h1 class="text-[10vw] md:text-8xl font-black uppercase leading-[0.9] tracking-tighter drop-shadow-[4px_4px_0_rgba(0,0,0,1)] text-white mb-8" style="-webkit-text-stroke: 3px black;">
+            Nombre del Proyecto
+        </h1>
+
+        <p class="text-2xl font-bold max-w-3xl leading-relaxed border-l-8 border-accent pl-6 py-2">
+            Un pequeño párrafo introductorio que resume el objetivo de este proyecto y el impacto que tuvo. Debe ser directo y al grano.
+        </p>
+    </header>
+
+    <!-- CONTENIDO TIPO ARTÍCULO -->
+    <article class="px-4 md:px-12 max-w-4xl mx-auto pb-32 flex flex-col gap-12 text-xl leading-relaxed">
+        
+        <h2 class="text-5xl font-black uppercase mb-4 mt-8">El Reto</h2>
+        
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+
+        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=1200&auto=format&fit=crop" 
+             alt="Detalle del proyecto 1" 
+             class="w-full border-4 border-black shadow-neo-xl transform -rotate-1 my-8">
+
+        <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        
+        <img src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=1200&auto=format&fit=crop" 
+             alt="Detalle del proyecto 2" 
+             class="w-full border-4 border-black shadow-neo-xl transform rotate-1 my-8">
+             
+        <h2 class="text-4xl font-black uppercase mb-4 mt-8">El Resultado</h2>
+             
+        <p>
+            El resultado fue una campaña que rompió los esquemas del sector y consiguió conectar de manera profunda con la audiencia joven urbana.
+        </p>
+
+    </article>
+
+    <!-- FOOTER MENOR -->
+    <footer class="bg-white border-t-8 border-black py-12 px-4 text-center flex flex-col items-center">
+        <h2 class="text-4xl font-black uppercase mb-8">¿Siguiente Proyecto?</h2>
+        <a href="index.html#proyectos" class="inline-block bg-accent border-4 border-black px-8 py-4 text-2xl font-black uppercase shadow-neo elastic-hover">
+            Volver al Archivo
+        </a>
+    </footer>
+
+    <!-- SCRIPT PARA RECUPERAR COLOR -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Recuperar color de localStorage (como en el index)
+            const savedData = localStorage.getItem('themeData');
+            if (savedData) {
+                try {
+                    const parsed = JSON.parse(savedData);
+                    document.documentElement.style.setProperty('--accent-color', parsed.color);
+                } catch(e){}
+            }
+        });
+    </script>
+</body>
+</html>
