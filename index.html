@@ -46,6 +46,10 @@
             overflow-x: hidden;
         }
 
+        html {
+            overflow-x: hidden;
+        }
+
         /* Utilidad para pintar fondos o sombras con la variable JS */
         .bg-accent {
             background-color: var(--accent-color) !important;
@@ -130,7 +134,7 @@
             border-bottom: 4px solid black;
             background-color: var(--accent-color);
             padding: 1rem 0;
-            transform: rotate(-2deg) scale(1.05);
+            transform: rotate(-2deg) scale(1.02);
             /* Efecto cinta torcida */
             margin: 4rem 0;
             box-shadow: 0 10px 0px 0px rgba(0, 0, 0, 1);
@@ -183,6 +187,8 @@
             background-color: var(--accent-color);
             padding-left: 3rem;
             cursor: pointer;
+            max-width: 100%;
+            box-sizing: border-box;
         }
 
         /* Imagen flotante que persigue el cursor */
@@ -483,7 +489,7 @@
     </section>
 
     <!-- SKILLS MARQUEE -->
-    <section class="py-10 overflow-hidden">
+    <section class="py-10 overflow-hidden" style="clip-path: inset(0)">
         <div class="marquee-wrapper border-y-4 border-black bg-accent">
             <div class="marquee-content">
                 <span>Creativo</span> <span>•</span>
